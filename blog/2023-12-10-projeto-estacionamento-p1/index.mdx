@@ -1,0 +1,58 @@
+
+---
+slug: projeto-estacionamento-hexagonal-parte-1
+title: Projeto Estacionamento Hexagonal (Parte 1)
+authors: [will]
+tags: [100diasdecodigo, .net, reactjs, hexagonal]
+---
+
+# Projeto Estacionamento Hexagonal Parte 1
+
+A ideia dessa série é documentar o desenvolvimento de uma aplicação Simples,
+mas aplicando DDD, Arquitetura Limpa e Hexagonal ou Ports & Adapters.
+
+Dessa forma consigo fixar melhor e talvez ajudar alguém que vai chegar por aqui.
+
+Como tecnologia utilizarei aspnet 8 para a API e React 18 para o frontend.
+
+O foco é total no backend, mas assim não deixo meus conhecimentos de front enferrujarem
+tanto.
+
+## Escopo do Projeto
+
+O cliente precisa ter o controle de entrada e saída do estacionamento e realizar
+a cobrança.
+
+Com as seguintes funcionalidades:
+
+- Controlar entrada de carros (placa, horário)
+
+- Controlar saída de carros (placa, horário)
+
+- Calcular custo do estacionamento com base na entrada e saída ```(saida-entrada) *preco```
+
+- Listar todos os carros Estacionados.
+
+- Fechamento do dia Todos os carros
+
+## Parte 1: Estrutura do projeto backend
+
+![Estrutura do projeto .net]("./img/estrutura-projeto-hexagonal-c#.png")
+
+## Repositório
+
+## Diário da jornada
+
+
+### 06/12/2023
+Apenas criei a estrutura do projeto, vi vários modelos, e acabei optando por seguir a minha linha com base no que vi.
+Pode não ser a melhor ideia, mas acho que vai me ajudar a compreender melhor a arquitetura.
+
+### 11/12/2023
+Modelagem das entidades de domínio, começando devagar, aproveitando o tempo livre modelei a Entidade principal, e uma de record. Ainda não coloquei validações muito específicas.
+
+### 12/12/2023
+Com a modelagem da entidade de domínio feita, hoje foi o dia de quebrar a cabeça com testes, não fiz TDD, e mesmo assim gastei um tempo considerável, mais do que eu gostaria para testar uma entidade simples.
+O lado bom é que conforme testo vou percebendo os erros de lógica, e me faz ver mais valor ainda no TDD, só preciso que meu cérebro compreenda isso também.
+Perdi um tempo considerável também, pois foi a primeira vez que usei esses construtores primários com o c# que deixa o código mais enxuto ainda, mas bati cabeça na inicialização das propriedades.
+Testes feitos, entidade corrigida, vamos para o próximo.
