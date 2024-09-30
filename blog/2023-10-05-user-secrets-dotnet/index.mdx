@@ -13,7 +13,7 @@ Neste artigo, vou compartilhar com vocês algumas coisas que aprendi sobre como 
 
 Quando eu comecei a programar em ambientes Linux, eu costumava usar os arquivos _**.env**_ ou exportar variáveis no Bash para armazenar dados sensíveis, como senhas ou chaves de API. Mas quando eu migrei para o mundo Windows e dotNet, eu descobri que a forma mais comum de fazer isso era usando o arquivo _**appsettings**_, que contém as configurações do projeto. Isso me pareceu muito estranho, pois esse arquivo é normalmente versionado pelo Git, o que pode expor os dados para qualquer pessoa que tenha acesso ao repositório. Além disso, era um trabalho extra ter que remover esses dados antes de fazer um commit.
 
-Por isso, eu optei por usar as variáveis de ambiente do próprio Windows, que são mais seguras e fáceis de configurar. Mas o que eu não sabia é que o dotNet tem uma ferramenta excelente para lidar com os segredos do projeto, que é o User Secrets.
+Por isso, eu optei por usar as variáveis de ambiente do próprio Windows, que são mais seguras, porem não tão fáceis de configurar. Mas o que eu não sabia é que o dotNet tem uma ferramenta excelente para lidar com os segredos do projeto, que é o User Secrets.
 
 ## Hierarquia de Variáveis
 
